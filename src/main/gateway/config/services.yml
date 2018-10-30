@@ -1,14 +1,29 @@
-gateway-solution/another-service.xml:
-  url: "/another-service-example"
+gateway-solution/v2/api2:
+  url: "/example2"
+  policy: "gateway-solution/another-service.xml"
   httpMethods:
   - "DELETE"
   - "POST"
   - "GET"
   - "PUT"
-gateway-solution/my-gateway-api.xml:
+  properties:
+    ENV.k2:
+gateway-solution/v1/api1:
   url: "/example"
+  policy: "gateway-solution/another-service.xml"
   httpMethods:
   - "DELETE"
   - "POST"
   - "GET"
   - "PUT"
+  properties:
+    ENV.k1:
+gateway-solution/another-service:
+  url: "/another-service-example"
+  policy: "gateway-solution/another-service.xml"
+  httpMethods:
+  - "DELETE"
+  - "POST"
+  - "GET"
+  - "PUT"
+  properties: {}

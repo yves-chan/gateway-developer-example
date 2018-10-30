@@ -1,0 +1,9 @@
+jdbc-test:
+  driverClass: "com.l7tech.jdbc.mysql.MySQLDriver"
+  jdbcUrl: "http:url"
+  properties:
+    EnableCancelTimeout: "true"
+  user: "xiii"
+  passwordRef: "my-password"
+  minimumPoolSize: 3
+  maximumPoolSize: 15
